@@ -1,0 +1,40 @@
+$header_backgroundColor: #ffffff;
+$cream-colour: #f0e2d9;
+$hero_title: #221538;
+$sub-hero_title: #987074;
+
+@mixin flexing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionWrapper {
+  background-color: $cream-colour;
+  .heroSection {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    .heroInfo {
+      @include flexing();
+
+      .centerHeroInfo {
+        @include flexing();
+        flex-direction: column;
+        align-items: flex-start;
+
+        .buttons {
+          @include flexing();
+          justify-content: space-around;
+          width: 90%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  img {
+    object-fit: contain;
+    max-width: 45rem;
+  }
+}

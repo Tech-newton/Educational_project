@@ -1,0 +1,73 @@
+// SCSS Variables
+$header_backgroundColor: #ffffff;
+$cream-colour: #f0e2d9;
+$hero_title: #221538;
+$sub-hero_title: #987074;
+
+@mixin flexing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  background-color: $header_backgroundColor;
+  @include flexing;
+  padding: 1rem 0;
+  box-shadow: 6px 10px 30px 30px rgba($color: #948679, $alpha: 0.8);
+  .headerwrapper {
+    @include flexing();
+    // justify-content: space-between;
+    width: 88%;
+    margin: auto;
+
+    .logo {
+      @include flexing();
+      justify-content: start;
+      flex: 4.5;
+    }
+
+    .navBar {
+      @include flexing();
+      flex: 7;
+
+      .dropdown {
+        @include flexing();
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .fa-sort-down {
+          margin: 0;
+          padding: 0;
+          margin-left: 0.5rem;
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+      }
+      .login {
+        @include flexing();
+        h6 {
+          font-weight: 200;
+          margin: 0;
+        }
+
+        .fa-user {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .cart {
+        @include flexing();
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

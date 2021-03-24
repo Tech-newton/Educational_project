@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Vijay-app"
+    }
+  },
+  "defaultProject": "Vijay-app",
+  "cli": {
+    "analytics": false
+  }
 }

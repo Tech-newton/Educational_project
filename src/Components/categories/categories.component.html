@@ -1,0 +1,25 @@
+<div class="topcourses">
+    <div class="topCourseWrapper">
+
+        <div class="topC_header">
+            <div class="leftHeader">
+                <h3>Via School categories Courses</h3>
+                <p>custom asdad asdji asjda asjd km kd </p>
+            </div>
+    
+            <div class="rightHeader">
+                <button type="button" class="btn btn-link">View All Courses</button>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    
+
+        <div class="categories">
+            <div class="card" *ngFor="let category of cateforiesList">
+                <app-category-card [data]="category"></app-category-card>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>

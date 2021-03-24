@@ -1,0 +1,37 @@
+@mixin flexing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin margin {
+  width: 80%;
+  margin: auto;
+}
+.topcourses {
+  padding: 2rem 0;
+
+  .topCourseWrapper {
+    @include margin();
+    margin-bottom: 1rem;
+
+    .topC_header {
+      @include flexing();
+      width: 100%;
+
+      .rightHeader {
+        @include flexing();
+      }
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 1rem;
+
+      .card {
+        width: 17vw;
+      }
+    }
+  }
+}

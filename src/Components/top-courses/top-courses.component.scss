@@ -1,0 +1,68 @@
+$header_backgroundColor: #ffffff;
+$cream-colour: #f0e2d9;
+$hero_title: #221538;
+$sub-hero_title: #987074;
+
+@mixin flexing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin margin {
+  width: 80%;
+  margin: auto;
+}
+
+.topCourses {
+  background-color: $cream-colour;
+  padding-bottom: 2rem;
+
+  .topCourses_wrapper {
+    @include margin();
+
+    .courses_Header {
+      padding: 2rem 0;
+      .topC_header {
+        @include flexing();
+        width: 100%;
+
+        .rightHeader {
+          @include flexing();
+        }
+      }
+    }
+
+    .courseCards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
+      row-gap: 1rem;
+      margin-bottom: 2rem;
+      .courseCard {
+        width: 6vw !important;
+
+        .card {
+          border-radius: 5px;
+
+          .card-img-top {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      .btn {
+        background-color: transparent !important;
+        color: #28a745;
+        border: 3px solid #28a745;
+        border-radius: 25px;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+}
