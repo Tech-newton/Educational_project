@@ -4,6 +4,8 @@ $cream-colour: #f0e2d9;
 $hero_title: #221538;
 $sub-hero_title: #987074;
 
+$tablet_mode: 1045px;
+
 @mixin flexing {
   display: flex;
   justify-content: space-between;
@@ -15,6 +17,7 @@ $sub-hero_title: #987074;
   @include flexing;
   padding: 1rem 0;
   box-shadow: 6px 10px 30px 30px rgba($color: #948679, $alpha: 0.8);
+
   .headerwrapper {
     @include flexing();
     // justify-content: space-between;
@@ -30,6 +33,10 @@ $sub-hero_title: #987074;
     .navBar {
       @include flexing();
       flex: 7;
+
+      @media (max-width: $tablet_mode) {
+        display: none;
+      }
 
       .dropdown {
         @include flexing();
@@ -67,6 +74,14 @@ $sub-hero_title: #987074;
         &:hover {
           cursor: pointer;
         }
+      }
+    }
+
+    .bar {
+      display: none;
+
+      @media (max-width: $tablet_mode) {
+        display: inline-block;
       }
     }
   }

@@ -3,6 +3,8 @@ $cream-colour: #f0e2d9;
 $hero_title: #221538;
 $sub-hero_title: #987074;
 
+$tablet_mode: 1245px;
+
 @mixin flexing {
   display: flex;
   justify-content: space-between;
@@ -23,6 +25,7 @@ $sub-hero_title: #987074;
 
     .courses_Header {
       padding: 2rem 0;
+
       .topC_header {
         @include flexing();
         width: 100%;
@@ -35,19 +38,20 @@ $sub-hero_title: #987074;
 
     .courseCards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+      justify-items: center;
       column-gap: 1rem;
       row-gap: 1rem;
       margin-bottom: 2rem;
-      .courseCard {
-        width: 6vw !important;
 
+      .courseCard {
         .card {
           border-radius: 5px;
 
           .card-img-top {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+            width: 100%;
           }
         }
       }

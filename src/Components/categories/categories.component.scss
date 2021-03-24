@@ -1,3 +1,5 @@
+$tablet_mode: 1245px;
+
 @mixin flexing {
   display: flex;
   justify-content: space-between;
@@ -26,11 +28,17 @@
 
     .categories {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
       column-gap: 1rem;
+      row-gap: 1rem;
+      justify-items: center;
 
       .card {
-        width: 17vw;
+        width: 100%;
+
+        @media (max-width: $tablet_mode) {
+          min-width: 12rem;
+        }
       }
     }
   }
