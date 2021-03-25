@@ -1,0 +1,29 @@
+<div class="loginWrapper row">
+    <div class="loginHeader">
+        <h1>Login Page</h1>
+        <a routerLink="signUp">Sign Up</a>
+    </div>
+    
+    <div class="loginFields col-sm-12 col-md-5 col-lg-5 col-xl-5">
+        <form [formGroup]="loginForm" (ngSubmit)="submitMethod(loginForm.value)">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" formControlName="email" name="email" aria-describedby="email" placeholder="Enter Your Email Address" required>
+                <small id="emailHelp" class="form-text text-muted" *ngIf="loginForm.controls['email'].invalid">We'll never share your email with anyone else.</small>
+                <div class="alert" *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched">Please Enter your Email Address</div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password" required>
+              <div class="alert" *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">Please Enter Your Password</div>
+            </div>
+            
+            <div class="button">
+                <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+            </div>
+          </form>
+    </div>
+    <div class="image  col-sm-12 col-md-7 col-lg-7 col-xl-7">
+        <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fHN0dWR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="">
+    </div>
+</div>
